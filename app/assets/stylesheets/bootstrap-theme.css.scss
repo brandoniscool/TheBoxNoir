@@ -1,6 +1,17 @@
 @import "base";
 
 
+.btn {
+	@include border-radius(3px);
+	border:0;
+	line-height:20px;
+	font-size:10px;
+	@include helvetica;
+	text-transform:uppercase;
+	font-weight:bold;
+	letter-spacing:3px;
+	padding:16px 26px;
+}
 .btn-default:active,
 .btn-primary:active,
 .btn-success:active,
@@ -23,25 +34,16 @@
 }
 
 .btn-default {
-  text-shadow: 0 1px 0 #fff;
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, 0%, #e6e6e6, 100%);
-  background-image: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%);
-  background-image: linear-gradient(to bottom, #ffffff 0%, #e6e6e6 100%);
-  background-repeat: repeat-x;
-  border-color: #e0e0e0;
-  border-color: #ccc;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+	background:$white;
 }
 
 .btn-default:active,
 .btn-default.active {
-  background-color: #e6e6e6;
-  border-color: #e0e0e0;
+  background:darken($white, 5%);
 }
 
 .btn-primary {
-	background:$green;
+	background:$green !important;
 }
 
 .btn-primary:active,
@@ -49,6 +51,9 @@
   background-color:$green;
 }
 
+.btn-primary:hover {
+  background-color:darken($green, 5%);
+}
 .btn-success {
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#5cb85c), to(#449d44));
   background-image: -webkit-linear-gradient(top, #5cb85c, 0%, #449d44, 100%);
@@ -136,16 +141,38 @@
 	background:$slate;
 	@include border-radius(0);
 	margin-bottom:0;
+	color:$white;
 }
 .navbar-discount {
 	padding:25px 0;
+	p {
+		padding:0 140px;
+		margin:0;
+		text-transform:uppercase;
+		u {font-weight:bold;}
+	}
 }
 .navbar-clear {
 	background:none;
+	padding:25px 0;
+	font-size:12px;
 }
 .navbar .navbar-nav > .active > a {
 }
-
+.navbar-nav > li {
+	padding:10px;
+	color:$white;
+	line-height:20px;
+}
+.navbar-nav > li > a {
+	padding:0;
+	color:$white;
+	font-weight:bold;
+	&:hover {
+		background:none;
+		text-decoration:underline;
+	}
+}
 
 .navbar-static-top,
 .navbar-fixed-top,
