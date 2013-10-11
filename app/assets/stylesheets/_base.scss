@@ -1,0 +1,45 @@
+@import "compass";
+
+
+/* fonts */
+
+
+@font-face {
+  font-family:"MinionPro";
+  src:url(MinionPro.otf);
+}
+
+@mixin helvetica {
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@mixin minion {
+	font-family:"MinionPro", "Palatino", serif;
+}
+
+/* color variables */
+
+$slate:#3b3a3d;
+$white:#fff;
+$green:#57ad68;
+$black:#000;
+
+/* sprite reference */
+
+@mixin sprite {background-image:image-url('sprite.png');}
+
+.sprite-discount {
+	@include sprite;
+	background-position:0px -20px;
+	height:108px;
+	width:130px;
+	position:absolute;
+	margin-top:-25px;
+}
+.sprite-lock {
+	float:left;
+	width:26px;
+	height:26px;
+	@include sprite;
+	background-position:-150px 0px;
+	margin-top:-3px;
+}

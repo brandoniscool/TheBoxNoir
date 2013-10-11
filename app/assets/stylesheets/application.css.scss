@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+ 
+@import "base";
+
+body {
+	@include helvetica;
+	-webkit-font-smoothing:antialiased;
+}
+.backdrop {
+	position:relative;
+	width:100%;
+	background-image:image-url("idx_first.jpg");
+	background-size:cover;
+}
+.container {
+	max-width:1000px;
+}
+.jumbotron {
+	background:none;
+	text-align:center;
+	padding-bottom:80px;
+	img#jumbotron-logo {
+		position:relative;
+		display:inline-block;
+	}
+}
+
