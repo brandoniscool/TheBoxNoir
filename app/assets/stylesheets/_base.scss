@@ -16,6 +16,15 @@
 	font-family:"MinionPro", "Palatino", serif;
 }
 
+/* general rules */
+
+ul {
+	list-style:none;
+	display:block;
+	padding:0;
+	margin:0;
+}
+ 
 /* color variables */
 
 $slate:#3b3a3d;
@@ -45,4 +54,13 @@ $smoke:#f5f5f5;
 	@include sprite;
 	background-position:-150px 0px;
 	margin-top:-3px;
+}
+.sprite-ylp {
+	background-position:-150px -83px;
+}
+.sprite-fb {
+	background-position:-150px -26px;
+}
+.sprite-tw {
+	background-position:-150px -54px;
 }

@@ -106,13 +106,13 @@
 	background:$luxe;
 	padding:10px 20px;
 	&:hover {
-		background:lighten($luxe, 5%);
+		background:lighten($luxe, 10%);
 	}
 }
 
 .btn-info:active,
 .btn-info.active {
-  background:lighten($luxe, 5%);
+  background:lighten($luxe, 10%);
 }
 
 .thumbnail,
