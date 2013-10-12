@@ -11,6 +11,7 @@
 	font-weight:bold;
 	letter-spacing:3px;
 	padding:16px 26px;
+	-webkit-font-smoothing:antialiased;
 }
 .btn-default:active,
 .btn-primary:active,
@@ -52,7 +53,8 @@
 }
 
 .btn-primary:hover {
-  background-color:darken($green, 5%);
+  background-color:darken($green, 5%) !important;
+	border:none;
 }
 .btn-success {
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#5cb85c), to(#449d44));
@@ -109,7 +111,7 @@
 	color:$luxe;
 	padding:10px 20px;
 	&:hover {
-		background:$green;
+		background:$blue;
 		color:$white;
 	}
 }

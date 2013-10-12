@@ -36,10 +36,9 @@
 			<div id="jumbotron-pitch">
       <p>We help you find the right alcoholic beverages for your unique palate. No more guesswork, no more bad advice, just damn good drinks delivered straight to your door every month for as low as $20/month</p>
 			<%= form_for @waitlist do |f| %>
-				<%= f.email_field :email_address %>
-				<%= f.submit "submit" %>
+				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
+				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
 			<% end %>
-      <p><a class="btn btn-default btn-lg">learn about drinking</a><a class="btn btn-primary btn-lg">reserve a box</a></p>
 			</div>
     </div>
   </div>

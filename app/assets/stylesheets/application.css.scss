@@ -18,6 +18,18 @@ body {
 	@include helvetica;
 	-webkit-font-smoothing:antialiased;
 }
+/* form elements */
+
+.form-control {
+	@include border-radius(3px);
+	outline:none;
+	padding:25px 15px;
+	@include helvetica;
+	font-size:15px;
+	&:focus {border:1px solid #ccc;outline:none;}
+}
+
+/* idx */
 .backdrop {
 	position:relative;
 	width:100%;
@@ -45,6 +57,18 @@ body {
 		display:inline-block;
 		p {line-height:1.8;}
 		.btn-default {margin-right:10px;}
+		form {
+			width:100%;
+			float:left;
+			.form-control {
+				width:58%;
+				float:left;
+			}
+			.btn {
+				width:40%;
+				float:right;
+			}
+		}
 	}
 }
 .turn {
