@@ -50,25 +50,57 @@ body {
 .turn {
 	position:relative;
 	width:100%;
-	padding:50px 0;
+	padding:30px 0 50px;
+	.turn-header {
+		float:left;
+		width:100%;
+		margin-bottom:20px;
+		color:darken($white, 50%);
+		h1 {
+			margin:0;
+			@include minion;
+			font-size:30px;
+		}
+	}
 	.row {
 		.col-lg-4 {
 			@include box-sizing(border-box);
 			width:30%;
 			margin:0 1.5%;
 			height:300px;
-			padding:15px 30px;
+			padding:15px 0 0;
 			background:$smoke;
+			text-align:center;
 			h2 {
 				@include minion;
 				font-weight:bold;
-				font-size:110px;
-				margin-top:5px;
-				color:lighten($black, 80%);
+				font-size:60px;
+				margin:15px 0;
+				color:$white;
+				@include border-radius(50%);
+				background:$luxe;
+				width:160px;
+				height:160px;
+				text-align:center;
+				line-height:160px;
+				display:inline-block;
 			}
 			p {
 				@include minion;
 				font-size:17px;
+			}
+			.col-header {
+				font-size:10px;
+				font-weight:bold;
+				text-transform:uppercase;
+				width:100%;
+				text-align:center;
+				letter-spacing:3px;
+				color:lighten($black, 80%);
+			}
+			.col-bottom {
+				position:relative;
+				width:100%;
 			}
 		}
 	}

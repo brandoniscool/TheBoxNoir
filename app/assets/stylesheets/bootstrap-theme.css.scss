@@ -103,16 +103,21 @@
 }
 
 .btn-info {
-	background:$luxe;
+	width:100%;
+	background:lighten($luxe, 70%);
+	@include border-radius(0);
+	color:$luxe;
 	padding:10px 20px;
 	&:hover {
-		background:lighten($luxe, 10%);
+		background:lighten($luxe, 65%);
+		color:$luxe;
 	}
 }
 
 .btn-info:active,
 .btn-info.active {
-  background:lighten($luxe, 10%);
+  background:lighten($luxe, 65%);
+	color:$luxe;
 }
 
 .thumbnail,
