@@ -109,8 +109,8 @@
 	color:$luxe;
 	padding:10px 20px;
 	&:hover {
-		background:lighten($luxe, 65%);
-		color:$luxe;
+		background:$green;
+		color:$white;
 	}
 }
 

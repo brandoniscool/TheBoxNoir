@@ -50,7 +50,7 @@ body {
 .turn {
 	position:relative;
 	width:100%;
-	padding:30px 0 50px;
+	padding:30px 0 10px;
 	.turn-header {
 		float:left;
 		width:100%;
@@ -67,7 +67,7 @@ body {
 			@include box-sizing(border-box);
 			width:30%;
 			margin:0 1.5%;
-			height:300px;
+			height:290px;
 			padding:15px 0 0;
 			background:$smoke;
 			text-align:center;
@@ -102,6 +102,17 @@ body {
 				position:relative;
 				width:100%;
 			}
+		}
+	}
+	.turn-footer {
+		float:left;
+		width:100%;
+		margin-bottom:20px;
+		color:darken($white, 50%);
+		p {
+			@include minion;
+			font-size:15px;
+			margin-top:60px;
 		}
 	}
 }
