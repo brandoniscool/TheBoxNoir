@@ -5,38 +5,8 @@
 	});
 </script>
 
-<div class="navbar navbar-discount hide">
-	<div class="container">
-		<span class="sprite-discount"></span>
-		<p>Take 20% off purchases for the month of November. Code <u>NOV2013</u> at checkout.</p>		
-	</div>
-</div>
-<div class="navbar">
-  <div class="container">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
-					<li><a href="#"><span class="sprite-phone"></span> +1 (800) 618 5605</a></li>
-          <li><span class="sprite-lock"></span><b>100% Secure</b></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Help</a></li>
-					<li>/</li>
-          <li><a href="#">Your Orders</a></li>
-					<li>/</li>
-          <li><a href="#">Shopping Bag</a></li>
-					<li>/</li>
-          <li><a href="#">Login</a></li>
-        </ul>
-      </div><!--/.navbar-collapse -->  	
-	</div>
-</div>
+<%= render(:partial => 'partials/bar') -%>
+
 <div id="backdrop">
 	<div class="navbar navbar-opaque">
 		<div class="container">
@@ -52,9 +22,14 @@
 				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
 			<% end %>
 			</div>
+			<div id="jumbotron-promo">
+				<span class="sprite-discount"></span>
+				<p><b>Free shipping</b> on every order. <b>Reserve your box</b> today!</p>
+			</div>
     </div>
   </div>
 </div>
+
 <div class="turn">
 	<div class="container">
 		<div class="turn-header">
@@ -114,35 +89,5 @@
 	</div>
 </div>
 
-<footer>
-  <div class="container">
-		<div class="footer-left">
-			<ul class="footer-column">
-				<li class="footer-column-header">Company</li>
-				<li>About</li>
-				<li>FAQ</li>
-				<li>Help</li>
-				<li>Careers</li>
-			</ul>
-			<ul class="footer-column">
-				<li class="footer-column-header">More</li>
-				<li>Gift Cards</li>
-				<li>The Shoppe Noir</li>
-				<li>Customer Support</li>
-			</ul>
-		</div>
-		<div class="footer-right">
-			<div class="footer-social">
-				<a href="https://www.facebook.com/theboxnoir" rel="nofollow" target="_BLANK"><span class="footer-social-icon sprite-ylp"></span></a>
-				<a href="https://www.facebook.com/theboxnoir" rel="nofollow" target="_BLANK"><span class="footer-social-icon sprite-fb"></span></a>
-				<a href="https://twitter.com/TheBoxNoir" rel="nofollow" target="_BLANK"><span class="footer-social-icon sprite-tw"></span></a>
-			</div>
-			<div class="footer-copy">
-				<p>&copy; Balloonduck Inc. 2014</p>
-				<p>
-					Privacy Policy | Terms of Service
-				</p>
-			</div>
-		</div>
-	</div>
-</footer>
+<%= render(:partial => 'partials/footer') -%>
+
