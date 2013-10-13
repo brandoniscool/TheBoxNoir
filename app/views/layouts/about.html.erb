@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 			  <%= csrf_meta_tags %>
-			  <%= stylesheet_link_tag 'bootstrap', 'application', 'bootstrap-theme' -%>
+			  <%= stylesheet_link_tag 'bootstrap', 'application', 'bootstrap-theme', 'about' -%>
 		    <%= javascript_include_tag 'application' -%>
     </head>
     <body>
@@ -22,7 +22,6 @@
 				<div class="navbar navbar-alt">
 					<div class="container">
 						<%= image_tag('logo_alt.png', :id => 'nav-logo-alt')%>
-						<hr>
 				  </div>
 				</div>		
 				<%= yield %>
