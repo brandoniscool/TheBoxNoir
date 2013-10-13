@@ -5,6 +5,7 @@ class CreateWaitlists < ActiveRecord::Migration
 			t.string :gender
       t.timestamps
     end
+    	add_index :waitlists, :email_address, unique: true
   end
-	add_index :email_address, unique: true
+
 end
