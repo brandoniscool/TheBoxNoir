@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Topshelf::Application.load_tasks
+TheBoxNoir::Application.load_tasks

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Topshelf::Application.config.secret_key_base = 'fb7c87ff8e5cc8dc133c6e308316da0e4406cad94f7a6cd2c85353bbda85e4c3cfe7d4e4ac297868d084fc1a8fd9bd2fbe4d00b67b3b7c794447573c099cb9c5'
+TheBoxNoir::Application.config.secret_key_base = 'fb7c87ff8e5cc8dc133c6e308316da0e4406cad94f7a6cd2c85353bbda85e4c3cfe7d4e4ac297868d084fc1a8fd9bd2fbe4d00b67b3b7c794447573c099cb9c5'

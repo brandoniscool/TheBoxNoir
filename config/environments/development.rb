@@ -1,4 +1,4 @@
-Topshelf::Application.configure do
+TheBoxNoir::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,4 +26,15 @@ Topshelf::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+	
+	ActionMailer::Base.smtp_settings = {
+		:user_name => ENV["SENDGRID_USERNAME"],
+		:password => ENV["SENDGRID_PASSWORD"],
+		:domain => 'theboxnoir.com',
+		:address => 'smtp.sendgrid.net',
+		:port => 587,
+		:authentication => :plain,
+		:enable_starttls_auto => true
+	}
 end

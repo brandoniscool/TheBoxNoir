@@ -1,4 +1,4 @@
-Topshelf::Application.routes.draw do
+TheBoxNoir::Application.routes.draw do
 
 	root to: "welcome#index"
 	
