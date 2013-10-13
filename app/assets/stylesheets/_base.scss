@@ -43,8 +43,8 @@ $blue:#428BCA;
 .sprite-discount {
 	@include sprite;
 	background-position:0px -20px;
-	height:108px;
-	width:130px;
+	height:81px;
+	width:101px;
 	position:absolute;
 	margin-top:-25px;
 }
@@ -54,6 +54,14 @@ $blue:#428BCA;
 	height:26px;
 	@include sprite;
 	background-position:-150px 0px;
+	margin-top:-3px;
+}
+.sprite-phone {
+	float:left;
+	width:26px;
+	height:26px;
+	@include sprite;
+	background-position:-180px 0px;
 	margin-top:-3px;
 }
 .sprite-ylp {

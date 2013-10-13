@@ -29,8 +29,16 @@ body {
 	&:focus {border:1px solid #ccc;outline:none;}
 }
 
+/* nav bar */
+
+#nav-logo {
+	position:relative;
+	display:inline-block;
+	width:50%;
+}
+
 /* idx */
-.backdrop {
+#backdrop {
 	position:relative;
 	width:100%;
 	background-image:image-url("idx_first.jpg");
@@ -40,9 +48,9 @@ body {
 	max-width:1000px;
 }
 .jumbotron {
-	background:none;
+	background:rgba(0,0,0,0.5);
 	text-align:center;
-	padding-bottom:80px;
+	padding:50px 30px 130px;
 	img#jumbotron-logo {
 		position:relative;
 		display:inline-block;
@@ -52,13 +60,14 @@ body {
 		width:50%;
 		@include minion;
 		color:$white;
-		font-size:17px;
+		font-size:20px;
 		text-align:left;
 		display:inline-block;
 		p {line-height:1.8;}
 		.btn-default {margin-right:10px;}
 		form {
 			width:100%;
+			margin-top:20px;
 			float:left;
 			.form-control {
 				width:58%;

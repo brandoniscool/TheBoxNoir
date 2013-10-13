@@ -1,40 +1,52 @@
-<div class="navbar navbar-discount">
+<script>
+	$(function(){
+		var images = ['idx_first_1.jpg', 'idx_first_2.jpg', 'idx_first_3.jpg', 'idx_first_4.jpg', 'idx_first_5.jpg'];
+		$('#backdrop').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')'});
+	});
+</script>
+
+<div class="navbar navbar-discount hide">
 	<div class="container">
 		<span class="sprite-discount"></span>
 		<p>Take 20% off purchases for the month of November. Code <u>NOV2013</u> at checkout.</p>		
 	</div>
 </div>
-<div class="backdrop">
-	<div class="navbar navbar-clear">
-	  <div class="container">
-	      <div class="navbar-header">
-	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	          <span class="icon-bar"></span>
-	        </button>
-	      </div>
-	      <div class="navbar-collapse collapse">
-	        <ul class="nav navbar-nav navbar-left">
-	          <li><a href="#">Customer Support</a></li>
-	          <li><span class="sprite-lock"></span><b>100% Secure</b></li>
-	        </ul>
-	        <ul class="nav navbar-nav navbar-right">
-	          <li><a href="#">Help</a></li>
-						<li>/</li>
-	          <li><a href="#">Your Orders</a></li>
-						<li>/</li>
-	          <li><a href="#">Shopping Cart</a></li>
-	        </ul>
-	      </div><!--/.navbar-collapse -->
-	    </div>
+<div class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+					<li><a href="#"><span class="sprite-phone"></span> +1 (800) 618 5605</a></li>
+          <li><span class="sprite-lock"></span><b>100% Secure</b></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Help</a></li>
+					<li>/</li>
+          <li><a href="#">Your Orders</a></li>
+					<li>/</li>
+          <li><a href="#">Shopping Bag</a></li>
+					<li>/</li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div><!--/.navbar-collapse -->  	
 	</div>
-
+</div>
+<div id="backdrop">
+	<div class="navbar navbar-opaque">
+		<div class="container">
+			<%= image_tag('logo.png', :id => 'nav-logo')%>
+	  </div>
+	</div>
   <div class="jumbotron">
     <div class="container">
-      <%= image_tag('logo.png', :id => 'jumbotron-logo')%>
 			<div id="jumbotron-pitch">
-      <p>We help you find the right alcoholic beverages for your unique palate. No more guesswork, no more bad advice, just damn good drinks delivered straight to your door every month for as low as $20/month</p>
+      <p>We help you find the right alcoholic beverages for your unique palate. No more guesswork, no more bad advice, just damn good drinks delivered straight to your door every month for as low as $40/month.</p>
 			<%= form_for @waitlist do |f| %>
 				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
 				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
@@ -43,7 +55,6 @@
     </div>
   </div>
 </div>
-
 <div class="turn">
 	<div class="container">
 		<div class="turn-header">
