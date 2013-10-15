@@ -42,11 +42,12 @@ $blue:#428BCA;
 
 .sprite-discount {
 	@include sprite;
-	background-position:0px -20px;
-	height:81px;
-	width:101px;
+	background-position:0px 0px;
+	height:121px;
+	width:121px;
+	left:0;
 	position:absolute;
-	margin-top:-25px;
+	margin-top:-35px;
 }
 .sprite-lock {
 	float:left;

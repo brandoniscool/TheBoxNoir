@@ -1,3 +1,43 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "base";
+
+img#about-banner {
+	position:relative;
+	display:inline-block;
+	width:100%;
+	margin-bottom:10px;
+}
+div.about-pledge {
+	position:relative;
+	width:100%;
+	display:inline-block;
+	ul {
+		width:100%;
+		display:inline-block;
+		li {
+			width:32%;
+			float:left;
+			@include box-sizing(border-box);
+			margin-right:2%;
+			h1 {
+				@include minion;
+				font-size:20px;
+				width:100%;
+				float:left;
+				margin-bottom:20px;
+				color:$slate;
+			}
+			p {color:lighten($slate,10%);}
+		}
+		li:last-child {margin-right:0;}
+	}	
+}
+div.about-turn {
+	position:relative;
+	width:100%;
+	display:inline-block;
+}
+
