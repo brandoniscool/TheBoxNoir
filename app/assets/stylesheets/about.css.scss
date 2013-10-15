@@ -14,22 +14,26 @@ div.about-pledge {
 	position:relative;
 	width:100%;
 	display:inline-block;
-	h1 {
-		@include minion;
-		font-size:20px;
+	ul {
 		width:100%;
-		float:left;
-		margin-bottom:20px;
-		color:$slate;
-	}
-	p.p-left, p.p-right {
-		width:49%;
-		font-size:15px;
-		color:lighten($slate, 15%);
-		font-weight:200;
-	}
-	p.p-left {float:left;margin-right:2%;}
-	p.p-right {float:right;}
+		display:inline-block;
+		li {
+			width:32%;
+			float:left;
+			@include box-sizing(border-box);
+			margin-right:2%;
+			h1 {
+				@include minion;
+				font-size:20px;
+				width:100%;
+				float:left;
+				margin-bottom:20px;
+				color:$slate;
+			}
+			p {color:lighten($slate,10%);}
+		}
+		li:last-child {margin-right:0;}
+	}	
 }
 div.about-turn {
 	position:relative;

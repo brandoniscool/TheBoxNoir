@@ -215,13 +215,16 @@ footer {
 			li.footer-column-header {
 				font-size:17px;
 				font-weight:bold;
+				padding:0;
 				margin-bottom:10px;
 				color:$white;
 			}
 			li {
 				font-size:13px;
-				line-height:30px;
+				padding:5px 0;
+				line-height:18px;
 				color:darken($white, 30%);
+				a {color:darken($white, 30%);}
 			}
 		}
 	}
