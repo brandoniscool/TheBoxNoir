@@ -4,11 +4,12 @@
 
 @import "base";
 
-img#about-banner {
+div.about-backdrop {
+	background-image:image-url('about.jpg');
+	background-size:cover;
 	position:relative;
-	display:inline-block;
 	width:100%;
-	margin-bottom:10px;
+	display:inline-block;
 }
 div.about-pledge {
 	position:relative;

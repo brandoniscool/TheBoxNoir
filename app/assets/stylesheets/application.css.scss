@@ -45,7 +45,7 @@ body {
 #nav-logo {
 	position:relative;
 	display:inline-block;
-	width:85%;
+	width:65%;
 }
 #nav-logo-alt {
 	position:relative;
@@ -67,15 +67,20 @@ body {
 .jumbotron {
 	background:rgba(0,0,0,0.5);
 	text-align:center;
-	padding:50px 30px 130px;
+	padding:0 30px 100px;
 	.container {position:relative;}
 	img#jumbotron-logo {
 		position:relative;
 		display:inline-block;
 		margin-bottom:50px;
 	}
+	img#pitch-banner {
+		position:relative;
+		display:inline-block;
+		width:90%;
+	}
 	div#jumbotron-pitch {
-		width:50%;
+		width:52%;
 		@include minion;
 		color:$white;
 		font-size:20px;
@@ -85,7 +90,6 @@ body {
 		.btn-default {margin-right:10px;}
 		form {
 			width:100%;
-			margin-top:20px;
 			float:left;
 			.form-control {
 				width:58%;
@@ -99,7 +103,7 @@ body {
 	}
 	div#jumbotron-promo {
 		position:absolute;
-		bottom:-115px;
+		bottom:-80px;
 		left:0;
 		width:100%;
 		p {
@@ -136,23 +140,21 @@ body {
 			padding:15px 0 0;
 			background:$smoke;
 			text-align:center;
-			h2 {
-				@include minion;
-				font-weight:bold;
-				font-size:60px;
-				margin:15px 0;
+			.col-ic {
+				margin-top:15px;
 				color:$white;
-				@include border-radius(50%);
-				background:$luxe;
-				width:160px;
+				@include sprite;
+				width:190px;
 				height:160px;
-				text-align:center;
-				line-height:160px;
 				display:inline-block;
 			}
+			.col-wine {background-position:-253px 0px;}
+			.col-beer {background-position:-420px 0px;}
+			.col-ctail {background-position:-600px 0px;}
+			p.col-p {padding:0 10px;}
 			p {
 				@include minion;
-				font-size:17px;
+				font-size:15px;
 			}
 			.col-header {
 				font-size:10px;

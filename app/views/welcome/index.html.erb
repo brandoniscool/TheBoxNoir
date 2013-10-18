@@ -15,8 +15,8 @@
 	</div>
   <div class="jumbotron">
     <div class="container">
+			<%= image_tag('pitch.png', :id => 'pitch-banner')%>
 			<div id="jumbotron-pitch">
-      <p>We help you find the right alcoholic beverages for your unique palate. No more guesswork, no more bad advice, just damn good drinks delivered straight to your door every month for as low as $49/month.</p>
 			<%= form_for @waitlist do |f| %>
 				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
 				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
@@ -33,42 +33,42 @@
 <div class="turn">
 	<div class="container">
 		<div class="turn-header">
-			<h1>Select a plan that's right for you.</h1>
+			<h1>Choose the box that's right for you.</h1>
 		</div>
 	  <div class="row">
 	    <div class="col-lg-4">
-				<div class="col-header">one month subscription</div>
-	      <h2>$49</h2>
+				<div class="col-header">wine taster subscription</div>
+	      <span class="col-ic col-wine"></span>
 				<div class="col-bottom">
-		      <p>
-						Original price $49 per box.
+		      <p class="col-p">
+						Receive 3 bottles of handpicked fine wines / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Buy 1 month</a></p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
 				</div>
 	    </div>
 	    <div class="col-lg-4">
-				<div class="col-header">six month subscription</div>
-	      <h2>$180</h2>
+				<div class="col-header">beer lover subscription</div>
+	      <span class="col-ic col-beer"></span>
 				<div class="col-bottom">
-		      <p>
-						Save $10 per box.
+		      <p class="col-p">
+						Receive 6 new and exotic, craft, and imported beers / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Buy 6 months</a></p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
 				</div>
 	   </div>
 	    <div class="col-lg-4">
-				<div class="col-header">twelve month subscription</div>
-	      <h2>$300</h2>
+				<div class="col-header">cocktail subscription</div>
+	      <span class="col-ic col-ctail"></span>
 				<div class="col-bottom">
-		      <p>
-						Save $15 per box.
+		      <p class="col-p">
+						Receive 2 cocktails + ingredients + complimentary wine and beer / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Buy 12 months</a></p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
 				</div>
 	    </div>
 	  </div>
 		<div class="turn-footer">
-			<p>The Box Noir ships on the 10th of every month. Check if we ship to <a href="#">your state</a>.  </p>
+			<p>The Box Noir ships on the 10th of every month. We currently operate only in the state of <a href="#">California</a>.  </p>
 		</div>
 	</div>
 </div>
@@ -78,10 +78,9 @@
 		<div class="prestige-body">
 			<h1>Inside the box</h1><br />
 			<p>
-				Every box includes key ingredients for 
-				one fine cocktail, one specialty beer, and one extraordinary wine. 
+				Inside every box is a one-of-a-kind education. We don't just send you sample sizes bottles. With each box, we're helping you build a collection you'll be proud to show and serve to your friends, family, and guests. 
 				<br /><br />
-				Look forward to seasonal surprises such as barware, shot glasses, and <b>Noir’s Guide to Drinking</b> (a glossary of drinking terms and a look into the history of alcohol). 
+				Look forward to seasonal surprises such as barware, exclusive recipes, and <b>Noir’s Guide to Drinking</b> (a glossary of drinking terms and a look into the history of alcohol). 
 			</p>
 			<br /><br />
 			<p><a class="btn btn-primary" href="#">reserve my box now</a></p>
