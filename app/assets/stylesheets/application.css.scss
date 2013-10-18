@@ -116,6 +116,8 @@ body {
 		}
 	}
 }
+#turn-one {display:block;}
+#turn-two {display:none;}
 .turn {
 	position:relative;
 	width:100%;
@@ -132,6 +134,10 @@ body {
 			margin:0;
 			@include minion;
 			font-size:30px;
+		}
+		p {
+			@include minion;
+			font-size:15px;
 		}
 		.btn-primary {float:right;}
 	}
@@ -155,6 +161,9 @@ body {
 			.col-wine {background-position:-253px 0px;}
 			.col-beer {background-position:-420px 0px;}
 			.col-ctail {background-position:-600px 0px;}
+			.col-email {background-position:-187px -150px;}
+			.col-comp {background-position:-365px -150px;}
+			.col-truck {background-position:-570px -150px;width:218px;}
 			p.col-p {padding:0 10px;}
 			p {
 				@include minion;

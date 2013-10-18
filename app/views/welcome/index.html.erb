@@ -17,10 +17,10 @@
     <div class="container">
 			<%= image_tag('pitch.png', :id => 'pitch-banner')%>
 			<div id="jumbotron-pitch">
-			<%= form_for @waitlist do |f| %>
-				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
-				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
-			<% end %>
+			<form action="<%= reserve_path %>" method="get" >
+				 <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'your email address' %>
+				 <%= submit_tag "reserve my box", class: 'btn btn-primary btn-lg', name: nil %>
+			</form>
 			</div>
 			<div id="jumbotron-promo">
 				<span class="sprite-discount"></span>

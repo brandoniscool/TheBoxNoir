@@ -4,53 +4,107 @@
 		<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
   </div>
 </div>
-<div class="turn">
+<div id="turn-one" class="turn">
 	<div class="container">
 		<div class="turn-header">
-			<%= form_for @waitlist do |f| %>
+			<%= form_for @waitlist, remote: true do |f| %>
 			<h1>Enter your email address.</h1>
-				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
+				<%= f.email_field :email_address, placeholder: 'your email address', class:'form-control', value: params[:email] %>
 			<hr>
 		</div>
 		<div class="turn-header">
-			<h1>Choose the box you'd like to reserve.</h1>
+			<h1>Choose the boxes you'd like to reserve.</h1>
 		</div>
 	  <div class="row">
-	    <div class="col-lg-4">
+		
+		  <div class="col-lg-4">
 				<div class="col-header">wine taster subscription</div>
 	      <span class="col-ic col-wine"></span>
 				<div class="col-bottom">
 		      <p class="col-p">
 						Receive 3 bottles of handpicked fine wines / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+		      <label for="winebox" class="btn btn-info">Reserve this Box</label>
+					<input type="checkbox" id="winebox" value="winebox" />
 				</div>
-	    </div>
-	    <div class="col-lg-4">
+			</div>
+			
+					
+		  <div class="col-lg-4">
 				<div class="col-header">beer lover subscription</div>
 	      <span class="col-ic col-beer"></span>
 				<div class="col-bottom">
 		      <p class="col-p">
 						Receive 6 new and exotic, craft, and imported beers / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+		      <label for="beerbox" class="btn btn-info">Reserve this Box</label>	
+					<input type="checkbox" id="beerbox" value="beerbox" />					
 				</div>
-	   </div>
-	    <div class="col-lg-4">
+			</div>
+			
+			
+		  <div class="col-lg-4">
 				<div class="col-header">cocktail subscription</div>
-	      <span class="col-ic col-ctail"></span>
+			  <span class="col-ic col-ctail"></span>
 				<div class="col-bottom">
 		      <p class="col-p">
 						Receive 2 cocktails + ingredients + complimentary wine and beer / month
 					</p>
-		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+		      <label for="ctailbox" class="btn btn-info">Reserve this Box</label>
+		    	<input type="checkbox" id="ctailbox" value="ctailbox" />
 				</div>
-	    </div>	
-	  </div>
+			</div>			
+	  </div>	
 		<div class="turn-header">
 				<hr>
 				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
 			<% end %>
+		</div>
+	</div>
+</div>
+<div id="turn-two" class="turn">
+	<div class="container">
+		<div class="turn-header">
+			<h1>Thanks for your reservation!</h1><br />
+			<p>
+				A sincere thanks for giving our product a try. A confirmation has been sent to your email. <br />
+				The Box Noir ships on the 10th of every month. <br />
+				We currently ship only within the state of <a href="#">California</a>. But don't fret! We're expanding beyond state lines soon.</p> 
+			<hr>
+		</div>
+		<div class="turn-header">
+			<h1>What happens next?</h1>
+		</div>
+		<div class="row">
+	    <div class="col-lg-4">
+	      <span class="col-ic col-email"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Once your subscription is ready, we will send you an email with a link to claim your subscription. 
+					</p>
+				</div>
+	    </div>
+	    <div class="col-lg-4">
+	      <span class="col-ic col-comp"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Enter your delivery information and create your taster's profile so we can start learning what you like.
+					</p>
+				</div>
+	   </div>
+	    <div class="col-lg-4">
+	      <span class="col-ic col-truck"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Sit back and relax while we deliver a box of fine drinks and other goodies straight to your doorstep every month. 
+					</p>
+				</div>
+	    </div>
+	  </div>
+		<div class="turn-header">
+				<hr>
+				<div class="btn btn-lg btn-fb">like us on facebook</div>
+				<div class="btn btn-lg btn-tw">follow us on twitter</div>
 		</div>
 	</div>
 </div>

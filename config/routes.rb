@@ -4,11 +4,7 @@ TheBoxNoir::Application.routes.draw do
 	
 	
 	get '/reserve', :to => 'welcome#reserve'
-  
-  #about
-  get '/about', :to => 'about#index'
-  get '/faq', :to => 'about#faq'
-  get '/careers', :to => 'about#careers'
+
   
   
 	resources :users
