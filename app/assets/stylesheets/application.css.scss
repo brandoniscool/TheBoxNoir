@@ -120,6 +120,9 @@ body {
 	position:relative;
 	width:100%;
 	padding:30px 0 10px;
+	form {
+		.form-control {width:50%;margin-top:15px;}
+	}
 	.turn-header {
 		float:left;
 		width:100%;
@@ -130,13 +133,14 @@ body {
 			@include minion;
 			font-size:30px;
 		}
+		.btn-primary {float:right;}
 	}
 	.row {
 		.col-lg-4 {
 			@include box-sizing(border-box);
 			width:30%;
 			margin:0 1.5%;
-			height:290px;
+			height:300px;
 			padding:15px 0 0;
 			background:$smoke;
 			text-align:center;

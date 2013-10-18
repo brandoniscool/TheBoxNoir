@@ -3,7 +3,8 @@ TheBoxNoir::Application.routes.draw do
 	root to: "welcome#index"
 	
 	
-	
+	get '/reserve', :to => 'welcome#reserve'
+  
   #about
   get '/about', :to => 'about#index'
   get '/faq', :to => 'about#faq'

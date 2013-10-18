@@ -1,0 +1,57 @@
+<%= render(:partial => 'partials/bar') -%>
+<div class="navbar navbar-alt">
+	<div class="container">
+		<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
+  </div>
+</div>
+<div class="turn">
+	<div class="container">
+		<div class="turn-header">
+			<%= form_for @waitlist do |f| %>
+			<h1>Enter your email address.</h1>
+				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
+			<hr>
+		</div>
+		<div class="turn-header">
+			<h1>Choose the box you'd like to reserve.</h1>
+		</div>
+	  <div class="row">
+	    <div class="col-lg-4">
+				<div class="col-header">wine taster subscription</div>
+	      <span class="col-ic col-wine"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Receive 3 bottles of handpicked fine wines / month
+					</p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+				</div>
+	    </div>
+	    <div class="col-lg-4">
+				<div class="col-header">beer lover subscription</div>
+	      <span class="col-ic col-beer"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Receive 6 new and exotic, craft, and imported beers / month
+					</p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+				</div>
+	   </div>
+	    <div class="col-lg-4">
+				<div class="col-header">cocktail subscription</div>
+	      <span class="col-ic col-ctail"></span>
+				<div class="col-bottom">
+		      <p class="col-p">
+						Receive 2 cocktails + ingredients + complimentary wine and beer / month
+					</p>
+		      <p><a class="btn btn-info" href="#">Reserve this Box</a></p>
+				</div>
+	    </div>	
+	  </div>
+		<div class="turn-header">
+				<hr>
+				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<%= render(:partial => 'partials/footer') -%>
