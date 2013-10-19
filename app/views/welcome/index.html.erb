@@ -1,7 +1,7 @@
 <script>
 	$(function(){
 		var images = ['idx_first_1.jpg', 'idx_first_2.jpg', 'idx_first_3.jpg', 'idx_first_4.jpg', 'idx_first_5.jpg'];
-		$('#backdrop').css({'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')'});
+		$('#backdrop').css({'background-image': 'image-url(assets/' + images[Math.floor(Math.random() * images.length)] + ')'});
 	});
 </script>
 
@@ -10,17 +10,19 @@
 <div id="backdrop">
 	<div class="navbar navbar-opaque">
 		<div class="container">
-			<%= image_tag('logo.png', :id => 'nav-logo')%>
+			<%= link_to(root_url) do %>
+				<%= image_tag('logo.png', :id => 'nav-logo')%>
+			<% end %>
 	  </div>
 	</div>
   <div class="jumbotron">
     <div class="container">
+			<%= image_tag('pitch.png', :id => 'pitch-banner')%>
 			<div id="jumbotron-pitch">
-      <p>We help you find the right alcoholic beverages for your unique palate. No more guesswork, no more bad advice, just damn good drinks delivered straight to your door every month for as low as $49/month.</p>
-			<%= form_for @waitlist do |f| %>
-				<%= f.email_field :email_address, :placeholder => 'your email address', :class => 'form-control' %>
-				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
-			<% end %>
+			<form action="<%= reserve_path %>" method="get" >
+				 <%= email_field_tag :email, nil, class: 'form-control', placeholder: 'your email address' %>
+				 <%= submit_tag "reserve my box", class: 'btn btn-primary btn-lg', name: nil %>
+			</form>
 			</div>
 			<div id="jumbotron-promo">
 				<span class="sprite-discount"></span>
@@ -33,42 +35,48 @@
 <div class="turn">
 	<div class="container">
 		<div class="turn-header">
-			<h1>Select a plan that's right for you.</h1>
+			<h1>Choose the box that's right for you.</h1>
 		</div>
 	  <div class="row">
 	    <div class="col-lg-4">
-				<div class="col-header">one month subscription</div>
-	      <h2>$49</h2>
-				<div class="col-bottom">
-		      <p>
-						Original price $49 per box.
-					</p>
-		      <p><a class="btn btn-info" href="#">Buy 1 month</a></p>
+				<div class="col-container">
+					<div class="col-header">wine taster subscription</div>
+		      <span class="col-ic col-wine"></span>
+					<div class="col-bottom">
+			      <p class="col-p">
+							Receive 3 bottles of handpicked fine wines / month
+						</p>
+			      <a class="btn btn-info" href="#">Reserve this Box</a>
+					</div>
 				</div>
 	    </div>
 	    <div class="col-lg-4">
-				<div class="col-header">six month subscription</div>
-	      <h2>$180</h2>
-				<div class="col-bottom">
-		      <p>
-						Save $10 per box.
-					</p>
-		      <p><a class="btn btn-info" href="#">Buy 6 months</a></p>
+				<div class="col-container">
+					<div class="col-header">beer enthusiast subscription</div>
+		      <span class="col-ic col-beer"></span>
+					<div class="col-bottom">
+			      <p class="col-p">
+							Receive 6 new and exotic, craft, and imported beers / month
+						</p>
+			      <a class="btn btn-info" href="#">Reserve this Box</a>
+					</div>
 				</div>
 	   </div>
 	    <div class="col-lg-4">
-				<div class="col-header">twelve month subscription</div>
-	      <h2>$300</h2>
-				<div class="col-bottom">
-		      <p>
-						Save $15 per box.
-					</p>
-		      <p><a class="btn btn-info" href="#">Buy 12 months</a></p>
+				<div class="col-container">
+					<div class="col-header">cocktail subscription</div>
+		      <span class="col-ic col-ctail"></span>
+					<div class="col-bottom">
+			      <p class="col-p">
+							Receive 2 cocktails + ingredients + complimentary wine and beer / month
+						</p>
+			      <a class="btn btn-info" href="#">Reserve this Box</a>
+					</div>
 				</div>
 	    </div>
 	  </div>
 		<div class="turn-footer">
-			<p>The Box Noir ships on the 10th of every month. Check if we ship to <a href="#">your state</a>.  </p>
+			<p>The Box Noir ships on the 10th of every month. We currently operate only in the state of <a href="#">California</a>.  </p>
 		</div>
 	</div>
 </div>
@@ -78,13 +86,16 @@
 		<div class="prestige-body">
 			<h1>Inside the box</h1><br />
 			<p>
-				Every box includes key ingredients for 
-				one fine cocktail, one specialty beer, and one extraordinary wine. 
+				Inside every box is a one-of-a-kind education. We don't just send you sample sizes bottles. With each box, we're helping you build a collection you'll be proud to show and serve to your friends, family, and guests. 
 				<br /><br />
-				Look forward to seasonal surprises such as barware, shot glasses, and <b>Noir’s Guide to Drinking</b> (a glossary of drinking terms and a look into the history of alcohol). 
+				Look forward to seasonal surprises such as barware, exclusive recipes, and <b>Noir’s Guide to Drinking</b> (a glossary of drinking terms and a look into the history of alcohol). 
 			</p>
 			<br /><br />
-			<p><a class="btn btn-primary" href="#">reserve my box now</a></p>
+			<p>
+				<%= link_to(reserve_url) do %>			
+					<span class="btn btn-primary">reserve my box</span>
+				<% end %>
+			</p>
 		</div>
 	</div>
 </div>

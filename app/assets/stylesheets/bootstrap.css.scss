@@ -1232,7 +1232,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 1000px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -1709,14 +1709,13 @@ input[type="number"]::-webkit-inner-spin-button {
   display: block;
   width: 100%;
   height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: 25px 15px;
+  font-size: 15px;
   line-height: 1.428571429;
   color: #555555;
   vertical-align: middle;
   background-color: #ffffff;
   border: 1px solid #cccccc;
-  border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
           box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;

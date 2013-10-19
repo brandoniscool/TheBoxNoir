@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 			  <%= csrf_meta_tags %>
-			  <%= stylesheet_link_tag 'bootstrap', 'application', 'bootstrap-theme' -%>
+			  <%= stylesheet_link_tag 'bootstrap', 'application', 'bootstrap-theme', 'media' -%>
 		    <%= javascript_include_tag 'application' -%>
     </head>
     <body>
@@ -19,9 +19,6 @@
         <![endif]-->
         
 				<%= yield %>
-
-				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.js"><\/script>')</script>
     </body>
 </html>
 

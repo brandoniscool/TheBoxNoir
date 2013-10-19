@@ -45,7 +45,7 @@ body {
 #nav-logo {
 	position:relative;
 	display:inline-block;
-	width:85%;
+	width:65%;
 }
 #nav-logo-alt {
 	position:relative;
@@ -58,24 +58,30 @@ body {
 #backdrop {
 	position:relative;
 	width:100%;
-	background-image:image-url("idx_first.jpg");
+	background-image:image-url("idx_first_5.jpg");
 	background-size:cover;
 }
 .container {
-	max-width:1000px;
+	max-width:1000px !important;
 }
 .jumbotron {
-	background:rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.5) !important;
 	text-align:center;
-	padding:50px 30px 130px;
+	padding:0 30px 100px !important;
 	.container {position:relative;}
 	img#jumbotron-logo {
 		position:relative;
 		display:inline-block;
 		margin-bottom:50px;
 	}
+	img#pitch-banner {
+		position:relative;
+		display:inline-block;
+		width:80%;
+		margin:15px 0;
+	}
 	div#jumbotron-pitch {
-		width:50%;
+		width:52%;
 		@include minion;
 		color:$white;
 		font-size:20px;
@@ -85,7 +91,6 @@ body {
 		.btn-default {margin-right:10px;}
 		form {
 			width:100%;
-			margin-top:20px;
 			float:left;
 			.form-control {
 				width:58%;
@@ -99,7 +104,7 @@ body {
 	}
 	div#jumbotron-promo {
 		position:absolute;
-		bottom:-115px;
+		bottom:-80px;
 		left:0;
 		width:100%;
 		p {
@@ -112,10 +117,15 @@ body {
 		}
 	}
 }
+#turn-one {display:block;}
+#turn-two {display:none;}
 .turn {
 	position:relative;
 	width:100%;
 	padding:30px 0 10px;
+	form {
+		.form-control {width:50%;margin-top:15px;padding:20px 15px;}
+	}
 	.turn-header {
 		float:left;
 		width:100%;
@@ -123,39 +133,47 @@ body {
 		color:darken($white, 50%);
 		h1 {
 			margin:0;
+			margin-bottom:15px;
 			@include minion;
 			font-size:30px;
 		}
+		p {
+			@include minion;
+			font-size:15px;
+		}
+		.btn-primary {float:right;}
 	}
 	.row {
-		.col-lg-4 {
+		.col-container {
+			float:left;
+			width:100%;
 			@include box-sizing(border-box);
-			width:30%;
-			margin:0 1.5%;
-			height:290px;
-			padding:15px 0 0;
 			background:$smoke;
+		}
+		.col-lg-4 {
 			text-align:center;
-			h2 {
-				@include minion;
-				font-weight:bold;
-				font-size:60px;
-				margin:15px 0;
+			.col-ic {
+				margin-top:15px;
 				color:$white;
-				@include border-radius(50%);
-				background:$luxe;
-				width:160px;
+				@include sprite;
+				width:190px;
 				height:160px;
-				text-align:center;
-				line-height:160px;
 				display:inline-block;
 			}
+			.col-wine {background-position:-253px 0px;}
+			.col-beer {background-position:-420px 0px;}
+			.col-ctail {background-position:-600px 0px;}
+			.col-email {background-position:-187px -150px;}
+			.col-comp {background-position:-365px -150px;}
+			.col-truck {background-position:-570px -150px;width:218px;}
+			p.col-p {padding:0 10px;margin-bottom:20px;}
 			p {
 				@include minion;
-				font-size:17px;
+				font-size:15px;
 			}
 			.col-header {
 				font-size:10px;
+				margin-top:15px;
 				font-weight:bold;
 				text-transform:uppercase;
 				width:100%;
@@ -166,6 +184,35 @@ body {
 			.col-bottom {
 				position:relative;
 				width:100%;
+			}
+		}
+	}
+	.row-form {
+		margin-bottom:20px;
+		.col-lg-4 {
+			height:auto;
+			background:none;
+			.col-checkbox {float:left;margin:10px;clear:both;}
+			label {
+				text-align:left;
+				float:left;
+				width:80%;
+				h1 {
+					@include helvetica;
+					color:$black;
+					font-size:10px;
+					text-transform:uppercase;
+					float:left;
+					margin:10px;
+					letter-spacing:3px;
+					font-weight:bold;
+				}
+				p {
+					float:left;
+					margin:0 10px;
+					clear:both;
+					color:darken($white, 50%);
+				}
 			}
 		}
 	}
@@ -250,4 +297,5 @@ footer {
 		}
 	}
 }
+
 

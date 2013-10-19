@@ -11,4 +11,9 @@ validates :gender,
 	inclusion: { in: %w(male female) },
 	allow_nil: true
 	
+validates :type,
+  presence: true,
+  inclusion: { in: %w(winebox beerbox ctailbox) },
+  allow_nil: true
+	
 end
