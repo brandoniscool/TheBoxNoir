@@ -7,7 +7,7 @@
 	<ul>
 		<% if flash %>
 			<% flash.each do |key, notice| %>
-				<li><span>|<%= key %>| </span><%= notice %></li>
+				<li><span><% key %></span><%= notice %></li>
 			<% end %>
 		<% end %>
 		<li>
