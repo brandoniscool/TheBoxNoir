@@ -67,7 +67,7 @@ body {
 .jumbotron {
 	background:rgba(0,0,0,0.5);
 	text-align:center;
-	padding:0 30px 100px;
+	padding:0 30px 100px !important;
 	.container {position:relative;}
 	img#jumbotron-logo {
 		position:relative;
