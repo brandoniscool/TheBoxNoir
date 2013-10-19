@@ -1,46 +1,73 @@
 <%= render(:partial => 'partials/bar') -%>
 <div class="navbar navbar-alt">
 	<div class="container">
-		<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
+		<%= link_to(root_url) do %>
+			<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
+		<% end %>
   </div>
 </div>
 <div id="turn-one" class="turn">
 	<div class="container">
 		<div class="turn-header">
 			<%= form_for @waitlist, remote: true do |f| %>
-			<h1>Enter your email address.</h1>
+			<h1>1. Enter your email address.</h1>
 				<%= f.email_field :email_address, placeholder: 'your email address', class:'form-control', value: params[:email] %>
 			<hr>
 		</div>
 		<div class="turn-header">
-			<h1>Choose the boxes you'd like to reserve.</h1>
+			<h1>2. Who is the box for?</h1>
+			<%= f.fields_for :gender, @waitlist.gender do |s| %>		
+				<div class="row row-form">
+				<div class="col-lg-4">
+					<%= s.check_box :man, class: 'col-checkbox' %>
+					<label for="waitlist_gender_man">
+						<h1>Man</h1>
+						<p>Healthy, strong, confident man.</p>
+					</label>
+				</div>
+				<div class="col-lg-4">
+					<%= s.check_box :woman, class: 'col-checkbox' %>
+					<label for="waitlist_gender_woman">
+						<h1>Woman</h1>
+						<p>Beautiful, intelligent, active woman</p>
+					</label>
+				</div>			
+			</div>
+			<% end %>
+			<hr>
 		</div>
-		<div class="row row-form">
-			<div class="col-lg-4">
-				<input type="checkbox" id="winebox" value="winebox" class="col-checkbox" />
-				<label for="winebox">
-					<h1>Wine Taster Box</h1>
-					<p>Receive 3 bottles of hand-picked fine wines every month</p>
-				</label>
-			</div>
-			<div class="col-lg-4">
-				<input type="checkbox" id="beerbox" value="beerbox" class="col-checkbox" />
-				<label for="beerbox">
-					<h1>Beer Lovers Box</h1>
-					<p>Receive 6 new and exotic, craft, and imported beers every month</p>
-				</label>
-			</div>
-			<div class="col-lg-4">
-				<input type="checkbox" id="ctailbox" value="ctailbox" class="col-checkbox" />
-				<label for="ctailbox">
-					<h1>Cocktail Box</h1>
-					<p>Receive 2 cocktails (ingredients included) and complimentary wine and beer every month</p>
-				</label>
+
+		<div class="turn-header">
+			<h1>3. Choose the boxes you'd like to reserve.</h1>
+			<%= f.fields_for :type, @waitlist.type do |s| %>
+				<div class="row row-form">
+				<div class="col-lg-4">
+					<%= s.check_box :winebox, class: 'col-checkbox' %>
+					<label for="waitlist_type_winebox">
+						<h1>Wine Taster Box</h1>
+						<p>Receive 3 bottles of hand-picked fine wines every month</p>
+					</label>
+				</div>
+				<div class="col-lg-4">
+					<%= s.check_box :beerbox, class: 'col-checkbox' %>	
+					<label for="waitlist_type_beerbox">
+						<h1>Beer Enthusiast Box</h1>
+						<p>Receive 6 new and exotic, craft, and imported beers every month</p>
+					</label>
+				</div>
+				<div class="col-lg-4">
+					<%= s.check_box :ctailbox, class: 'col-checkbox' %>
+					<label for="waitlist_type_ctailbox">
+						<h1>Cocktail Box</h1>
+						<p>Receive 2 cocktails (ingredients included) and complimentary wine and beer every month</p>
+					</label>
+				</div>
 			</div>
 		</div>
 	  <div class="turn-header">
 				<hr>
 				<%= f.submit "reserve my box", :class => 'btn btn-primary btn-lg' %>
+				<% end %>
 			<% end %>
 		</div>
 	</div>
@@ -60,7 +87,7 @@
 <div class="turn">
 	<div class="container">
 		<div class="turn-header">
-		<h1>What happens next?</h1>
+		<h1 style="text-align:center;">What happens next?</h1>
 	</div>
 		<div class="row">
 	    <div class="col-lg-4">
@@ -90,8 +117,12 @@
   </div>
 		<div class="turn-header">
 			<hr>
-			<div class="btn btn-lg btn-fb">like us on facebook</div>
-			<div class="btn btn-lg btn-tw">follow us on twitter</div>
+				<a href="https://www.facebook.com/theboxnoir" rel="nofollow" target="_BLANK">
+					<div class="btn btn-lg btn-fb">like us on facebook</div>
+				</a>
+				<a href="https://twitter.com/TheBoxNoir" rel="nofollow" target="_BLANK">
+					<div class="btn btn-lg btn-tw">follow us on twitter</div>
+				</a>
 		</div>
 	</div>
 </div>

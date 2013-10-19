@@ -126,12 +126,14 @@
 	background:#4C66A4;
 	color:$white;
 	float:right;
+	&:hover {background:darken(#4C66A4, 5%);color:$white;}
 }
 .btn-tw {
 	background:#019AD2;
 	color:$white;
 	float:right;
 	margin-right:15px;
+	&:hover {background:darken(#019AD2, 5%);color:$white;}
 }
 
 .thumbnail,

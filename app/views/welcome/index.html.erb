@@ -10,7 +10,9 @@
 <div id="backdrop">
 	<div class="navbar navbar-opaque">
 		<div class="container">
-			<%= image_tag('logo.png', :id => 'nav-logo')%>
+			<%= link_to(root_url) do %>
+				<%= image_tag('logo.png', :id => 'nav-logo')%>
+			<% end %>
 	  </div>
 	</div>
   <div class="jumbotron">
@@ -47,7 +49,7 @@
 				</div>
 	    </div>
 	    <div class="col-lg-4">
-				<div class="col-header">beer lover subscription</div>
+				<div class="col-header">beer enthusiast subscription</div>
 	      <span class="col-ic col-beer"></span>
 				<div class="col-bottom">
 		      <p class="col-p">
