@@ -58,11 +58,11 @@ body {
 #backdrop {
 	position:relative;
 	width:100%;
-	background-image:image-url("idx_first.jpg");
+	background-image:image-url("idx_first_5.jpg");
 	background-size:cover;
 }
 .container {
-	max-width:1000px;
+	max-width:1000px !important;
 }
 .jumbotron {
 	background:rgba(0,0,0,0.5);
