@@ -10,6 +10,10 @@ gem 'thin'
 
 gem 'delayed_job_active_record'
 
+gem 'rails_12factor'
+
+gem 'asset_sync'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
