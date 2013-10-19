@@ -12,14 +12,18 @@ gem 'delayed_job_active_record'
 
 gem 'rails_12factor'
 
-gem 'asset_sync'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
 
+group :assets do
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+gem 'asset_sync'
+
+end
+
 
 # Use CoffeeScript for .js.coffee assets and views
 # gem 'coffee-rails', '~> 4.0.0'
