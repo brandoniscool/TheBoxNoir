@@ -56,7 +56,7 @@ TheBoxNoir::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( bootstrap.css )
+  config.assets.precompile += %w( bootstrap.css bootstrap-theme.css media.css )
     
   # Compress JavaScripts and CSS
   config.assets.compress = true
