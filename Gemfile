@@ -16,13 +16,11 @@ gem 'rails_12factor'
 gem 'sass-rails', '~> 4.0.0'
 gem "compass-rails", "~> 2.0.alpha.0"
 
-group :assets do
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 gem 'asset_sync'
-
-end
 
 
 # Use CoffeeScript for .js.coffee assets and views
