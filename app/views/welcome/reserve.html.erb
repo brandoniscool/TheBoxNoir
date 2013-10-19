@@ -11,7 +11,7 @@
 		<div class="turn-header">
 			<%= form_for @waitlist, remote: true do |f| %>
 			<h1>1. Enter your email address.</h1>
-				<%= f.email_field :email_address, placeholder: 'your email address', class:'form-control', value: params[:email] %>
+				<%= f.email_field :email_address, placeholder: 'your email address', class:'form-control', value: params[:email], autofocus: 'autofocus' %>
 			<hr>
 		</div>
 		<div class="turn-header">
