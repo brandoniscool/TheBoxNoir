@@ -1,0 +1,66 @@
+/* iphone */
+
+@media screen and (min-width : 320px) and (max-width : 480px) {
+	
+	html {-webkit-text-size-adjust:auto;}
+	body {
+		min-width:320px;
+		max-width:480px;
+	}
+	#nav-logo, #nav-logo-alt {width:100%;}
+	.jumbotron {
+		padding-bottom:75px;
+		img#pitch-banner {
+			width:100%;
+			margin-bottom:25px;
+		}
+		div#jumbotron-pitch {width:95%;}
+		div#jumbotron-promo {display:none;}
+	}
+	.prestige .prestige-body {
+		width:95%;
+		padding:20px 0;
+	}
+}
+ 
+/* ipad portrait */
+
+@media screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
+	
+	html {-webkit-text-size-adjust:none;}
+	body {
+		min-width:481px;
+		max-width:1024px;
+	}
+	#nav-logo, #nav-logo-alt {width:100%;}
+	.jumbotron {
+		padding-bottom:75px;
+		img#pitch-banner {
+			width:100%;
+			margin-bottom:25px;
+		}
+		div#jumbotron-pitch {width:95%;}
+		div#jumbotron-promo {display:none;}
+	}	
+	.prestige .prestige-body {
+		width:95%;
+		padding:40px 0;
+	}
+
+}
+
+/* ipad landscape */
+
+@media screen and (min-width: 481px) and (max-width: 910px) and (orientation:landscape) {
+	
+	html {-webkit-text-size-adjust:none;}
+	body {
+		min-width:481px;
+		max-width:910px;
+	}
+		
+
+
+} 
+
+
