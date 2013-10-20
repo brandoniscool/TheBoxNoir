@@ -8,6 +8,6 @@ $(function(){
 		});
 	})
 	.bind("ajax:error", function (xhr, status, error) {
-	    alert('failure!');
+	    alert('You have already reserved a box!');
 	});
 });
