@@ -4,7 +4,7 @@ class WaitlistMailer < ActionMailer::Base
 	def welcome_email(waitlist)
     @waitlist = waitlist
     @url = 'http://example.com/login'
-    mail(to: @waitlist.email_address, from: 'info@theboxnoir.com', subject: 'Welcome to My Awesome Site')
+    mail(to: @waitlist.email_address, from: 'info@theboxnoir.com', subject: "Thank you. Welcome to The Box Noir.")
   end
   
 end
