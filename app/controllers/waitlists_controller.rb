@@ -6,6 +6,7 @@ def create
   if request.xhr?
     
     if wait.save
+			WaitlistMailer.delay.welcome_email(wait) #send email
       render status: 200, :json => {:success => 'ok'}
     else
       render status: 406, :json => {:error => wait.errors.full_messages}
