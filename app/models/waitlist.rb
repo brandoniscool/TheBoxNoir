@@ -1,5 +1,7 @@
 class Waitlist < ActiveRecord::Base
 
+#serialize :gender, :type
+
 
 validates :email_address,
 	presence: true,
