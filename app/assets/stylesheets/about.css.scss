@@ -4,5 +4,94 @@
 
 @import "base";
 
+.col-sm-9 {
+	float:right;
+}
+.about-nav > li {
+	font-size:10px;
+	font-weight:bold;
+	letter-spacing:3px;
+	text-transform:uppercase;
+	a {
+		color:$black;
+		&:hover {
+			color:$blue;
+			background-color:transparent;
+		}
+	}
+}
+.well {
+	border-right:1px solid $smoke;
+	padding:0 20px;
+	span.btn {
+		margin-bottom:20px;
+	}
+}
 
+/* about */
 
+#about-jumbotron {
+	padding:0 !important;
+	margin-top:20px;
+	img {width:100%;}
+}
+#about-page-header {
+	margin:0;
+	border-bottom:none;
+	h2 {
+		@include minion;
+		margin-top:40px;
+		font-size:30px;
+		color:darken($white, 50%);
+	}
+	p {
+		@include minion;
+		font-size:23px;
+		width:50%;
+		color:darken($white, 50%);
+	}
+}
+div#about-page-founders {
+	width:50%;
+	margin:0 20px;
+	clear:both;
+	float:right;
+	border-top:1px solid $smoke;
+	border-bottom:1px solid $smoke;
+	padding:15px 0;
+	img {
+		@include border-radius(50%);
+		width:100px;
+		border:1px solid $smoke;
+		height:100px;
+		float:left;
+	}
+	span#founders {
+		float:left;
+		padding:10px;
+		p {
+			font-size:15px;
+			@include minion;
+			color:darken($white, 50%);
+		}
+	}
+}
+div.about-page-body {
+	h3 {
+		@include minion;
+		font-size:23px;
+		color:darken($white, 50%);
+	}
+	h4 {
+		@include minion;
+		font-size:18px;
+		color:darken($white, 50%);
+	}
+}
+p.about-page-body {
+	line-height:26px;
+	text-align:justify;
+}
+.about-turn {
+	margin-bottom:60px;
+}
