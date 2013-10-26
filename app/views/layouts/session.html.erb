@@ -1,19 +1,20 @@
 <% content_for :stylesheets do %>
-	<%= stylesheet_link_tag 'about' -%>
+	<%= stylesheet_link_tag 'session' -%>
 <% end %>
 
 
 <% content_for :content do %>
-	<div id="wrap">
-     <%= render(:partial => 'partials/bar') -%>
-		<div class="navbar navbar-alt">
+	<div id="session">
+		<%= render(:partial => 'partials/bar') -%>
+		<div class="navbar navbar-alt navbar-opaque">
 			<div class="container">
 				<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
 		  </div>
-		</div>		
-		<%= yield %>
+		</div>
+		<div class="container">
+			<%= yield %>
+		</div>
 	</div>		
-	<%= render(:partial => 'partials/footer') -%>
 <% end %>
 
 <%= render :template => 'layouts/template/application' -%>
