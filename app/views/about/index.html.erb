@@ -26,8 +26,19 @@
 	</p>
 	<div class="about-turn turn">
 		<div class="row">
+			<div class="col-lg-4">
+				<div class="col-container">
+					<div class="col-header">the original box noir</div>
+			     <span class="col-ic col-ctail"></span>
+					<div class="col-bottom">
+						<%= link_to(reserve_url) do %>		
+							<span class="btn btn-info">Reserve this Box</span>
+						<% end %>
+					</div>
+				</div>
+		  </div>
 	  <div class="col-lg-4">
-		<div class="col-container">
+			<div class="col-container">
 			<div class="col-header">wine subscription</div>
 	     <span class="col-ic col-wine"></span>
 			<div class="col-bottom">
@@ -47,18 +58,8 @@
 				<% end %>
 			</div>
 		</div>
-	 </div>
-	  <div class="col-lg-4">
-		<div class="col-container">
-			<div class="col-header">cocktail subscription</div>
-	     <span class="col-ic col-ctail"></span>
-			<div class="col-bottom">
-				<%= link_to(reserve_url) do %>		
-					<span class="btn btn-info">Reserve this Box</span>
-				<% end %>
-			</div>
-		</div>
-	  </div>
+	 	</div>
+
 	</div>
 	</div>
 </div>

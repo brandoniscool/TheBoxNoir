@@ -38,6 +38,20 @@
 			<h1>Choose the box that's right for you.</h1>
 		</div>
 	  <div class="row">
+		  <div class="col-lg-4">
+				<div class="col-container">
+					<div class="col-header">the original box noir</div>
+		      <span class="col-ic col-ctail"></span>
+					<div class="col-bottom">
+			      <p class="col-p">
+							Receive 2 cocktails (w/ingredients), complimentary wine and beer every month
+						</p>
+						<%= link_to(reserve_url) do %>		
+							<span class="btn btn-info">Reserve this Box</span>
+						<% end %>
+					</div>
+				</div>
+	    </div>
 	    <div class="col-lg-4">
 				<div class="col-container">
 					<div class="col-header">wine taster subscription</div>
@@ -66,20 +80,6 @@
 					</div>
 				</div>
 	   </div>
-	    <div class="col-lg-4">
-				<div class="col-container">
-					<div class="col-header">cocktail subscription</div>
-		      <span class="col-ic col-ctail"></span>
-					<div class="col-bottom">
-			      <p class="col-p">
-							Receive 2 cocktails, complimentary wine and beer every month
-						</p>
-						<%= link_to(reserve_url) do %>		
-							<span class="btn btn-info">Reserve this Box</span>
-						<% end %>
-					</div>
-				</div>
-	    </div>
 	  </div>
 		<div class="turn-footer">
 			<p>The Box Noir ships on the 10th of every month. We currently operate only in the state of <a href="#">California</a>.  </p>
@@ -99,7 +99,7 @@
 			<br /><br />
 			<p>
 				<%= link_to(reserve_url) do %>			
-					<span class="btn btn-primary">reserve my box</span>
+					<span class="btn btn-primary">reserve a box</span>
 				<% end %>
 			</p>
 		</div>
