@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 		<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 		<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -29,3 +30,45 @@
 			<%= render(:partial => 'partials/footer') -%>
     </body>
 </html>
+=======
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'about' -%>
+<% end %>
+
+
+<% content_for :content do %>
+	<div id="wrap">
+     <%= render(:partial => 'partials/bar') -%>
+		<div class="navbar navbar-alt">
+			<div class="container">
+				<%= link_to(root_path) do %>
+					<%= image_tag('logo.png', :id => 'nav-logo-alt')%>
+				<% end %>
+		  </div>
+		</div>	
+		<div class="container">	
+			<div class="row row-offcanvas row-offcanvas-right">
+				<%= yield %>	
+		  	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		      <div class="well sidebar-nav">
+						<%= link_to(reserve_path) do %>
+							<span class="btn btn-primary btn-xs">Reserve a Box</span>
+						<% end %>
+		        <ul class="about-nav nav">
+		          <li><%= link_to('Our Story', about_path)%></li>
+		          <li><%= link_to('FAQ', faq_path)%></li>
+		          <li><%= link_to('Careers', careers_path)%></li>
+		        </ul>
+		      </div><!--/.well -->
+		    </div><!--/span-->
+			</div>
+		</div>
+	</div>		
+	<%= render(:partial => 'partials/footer') -%>
+<% end %>
+
+<%= render :template => 'layouts/template/application' -%>
+
+
+
+>>>>>>> 48541552866fa1ecac957400675b9b1c82610338

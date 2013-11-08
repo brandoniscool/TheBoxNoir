@@ -1,25 +1,19 @@
-<h1>Users logs in here</h1>
-
-<p>Find me in app/views/session/create.html.erb</p>
+<% content_for(:title, 'Login: The Box Noir') %>
 
 
-<%= form_for(:session, :url => session_index_path, :method => :post) do |f| %>
-	<ul>
+
+<%= form_for(:session, :url => session_index_path, :html => {:class => 'form-signin'}, :method => :post) do |f| %>
+	<h2 class="form-signin-heading"><b>Welcome back,</b> old friend.</h2>
 		<% if flash %>
 			<% flash.each do |key, notice| %>
-				<li><span><% key %></span><%= notice %></li>
+				<span><span><% key %></span><%= notice %></span>
 			<% end %>
 		<% end %>
-		<li>
-			<%= f.label(:email_address) %>
-			<%= f.email_field(:email_address, :autofocus => 'autofocus') %>
-		</li>       
-		<li>
-			<%= f.label(:password) %>
-			<%= f.password_field(:password) %>
-		</li>
-	</ul>
-	<%= f.check_box(:remember_me, :class => 'login_re left', :checked => 'checked') %>
-	<%= f.label(:remember_me, 'Remember me', :class => 'login_re_lab left', :style => 'width:auto;') %>
-	<%= f.submit('Login', :name => nil) %>
+		<%= f.email_field(:email_address, :class => 'form-control', :autofocus => 'autofocus') %>
+		<%= f.password_field(:password, :class => 'form-control') %>
+		<%= f.label(:remember_me, :class => 'checkbox') do %>
+			<%= f.check_box(:remember_me, :checked => 'checked') %>
+			Remember Me
+		<% end %>
+	<%= f.submit('Login', :name => nil, :class => 'btn btn-lg btn-primary btn-block') %>
 <% end %>

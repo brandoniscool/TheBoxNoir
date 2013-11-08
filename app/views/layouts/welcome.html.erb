@@ -1,0 +1,12 @@
+<% content_for(:title, 'The Box Noir: The Finest Way to Drink') %>
+
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'welcome' -%>
+<% end %>
+
+<% content_for :content do %>
+	<%= yield -%>
+<% end %>
+
+<%= render :template => 'layouts/template/application' -%>
+
