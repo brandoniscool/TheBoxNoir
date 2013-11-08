@@ -40,6 +40,13 @@
 			<%= f.fields_for :type, @waitlist.type do |s| %>
 				<div class="row row-form">
 				<div class="col-lg-4">
+					<%= s.check_box :ctailbox, class: 'col-checkbox' %>
+					<label for="waitlist_type_ctailbox">
+						<h1>The Original Box Noir</h1>
+						<p>Receive 2 cocktails (w/ingredients) and complimentary wine and beer every month</p>
+					</label>
+				</div>
+				<div class="col-lg-4">
 					<%= s.check_box :winebox, class: 'col-checkbox' %>
 					<label for="waitlist_type_winebox">
 						<h1>Wine Taster Box</h1>
@@ -51,13 +58,6 @@
 					<label for="waitlist_type_beerbox">
 						<h1>Beer Enthusiast Box</h1>
 						<p>Receive 6 new and exotic, craft, and imported beers every month</p>
-					</label>
-				</div>
-				<div class="col-lg-4">
-					<%= s.check_box :ctailbox, class: 'col-checkbox' %>
-					<label for="waitlist_type_ctailbox">
-						<h1>Cocktail Box</h1>
-						<p>Receive 2 cocktails (ingredients included) and complimentary wine and beer every month</p>
 					</label>
 				</div>
 			</div>
