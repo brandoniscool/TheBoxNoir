@@ -13,6 +13,7 @@ TheBoxNoir::Application.routes.draw do
 	get '/careers', :to => 'about#careers'
   
 	resources :users
+	resources :products
 	
 	resources :waitlists
 
