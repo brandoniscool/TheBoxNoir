@@ -13,6 +13,7 @@ TheBoxNoir::Application.routes.draw do
   
     resources :reference
 	resources :users
+	resources :products
 	
 	resources :waitlists
 
