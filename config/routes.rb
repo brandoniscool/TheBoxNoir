@@ -2,7 +2,6 @@ TheBoxNoir::Application.routes.draw do
 
 	root to: "welcome#index"
 	
-	
 	get '/reserve', :to => 'welcome#reserve'
 	get '/login', :to => 'session#new'
   
@@ -12,6 +11,7 @@ TheBoxNoir::Application.routes.draw do
 	get '/faq', :to => 'about#faq'
 	get '/careers', :to => 'about#careers'
   
+    resources :reference
 	resources :users
 	
 	resources :waitlists
