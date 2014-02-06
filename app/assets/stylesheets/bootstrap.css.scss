@@ -1228,7 +1228,12 @@ pre code {
   .col-md-offset-11 {
     margin-left: 91.66666666666666%;
   }
+	.col-lg-4 {
+	  width: 33.33333333333333%;
+		float:left;
+	}
 }
+
 
 @media (min-width: 1200px) {
   .container {
